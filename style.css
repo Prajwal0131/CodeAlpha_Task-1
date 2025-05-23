@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior:auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(145deg, #ff0000 0%, #00ff00 50%, #1061ed 100%);
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+}   
+
+header {
+  background: linear-gradient(135deg,#4a3dfe 0%, #3d9dfe 50%, #f6a429 100%);
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.footer {
+  text-align: center;
+  padding: 10px;
+  font-size: 0.8rem;
+  color: #120303;
+  margin-top: 15px;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+}
+
+header p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin: 0;
+  color: #f0f0f0;
+}
+
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 9999;
+  padding: 20px;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+}
+
+.caption {
+  margin-top: 15px;
+  color: #fff;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
